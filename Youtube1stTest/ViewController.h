@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController<UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
+{
+    IBOutlet UITextField *myTextField;
+    NSMutableArray *resultados;
+    IBOutlet UITableView *myTableView;
+    IBOutlet UIActivityIndicatorView *indicator;
+    IBOutlet UIView *loadingIndicator;
+}
+-(void)textFieldDidChange;
 @end
